@@ -8,11 +8,12 @@ Group:		Development/Tools
 License:	GPL
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}-%{rel}.tar.gz
 # Source0-md5:	154d808510e19566ab49d1f58749494e
-Url:		http://cssed.sourceforge.net
-BuildRequires:	GConf2-devel
-BuildRequires:	ORBit2-devel
-BuildRequires:	libgnome-devel
-BuildRequires:	gnome-vfs2-devel
+Patch0:		%{name}-opt.patch
+URL:		http://cssed.sourceforge.net
+BuildRequires:	gtk+2-devel >= 2.0.0
+BuildRequires:	libgnomeui-devel >= 2.0
+BuildRequires:	libstdc++-devel
+BuildRequires:	pkgconfig
 BuildRequires:	vte-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -30,17 +31,19 @@ kodowania CSS przez autouzupe³nianie oraz pod¶wietlanie sk³adni CSS.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure
-%{__make}
+%{__make} \
+	OPT="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
 install pixmaps/%{name}-icon.png \
-    $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}-icon.png
+	$RPM_BUILD_ROOT%{_pixmapsdir}/%{name}-icon.png
 
 cat << EOF > $RPM_BUILD_ROOT%{_desktopdir}/%{name}.desktop
 [Desktop Entry]
@@ -60,10 +63,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/cssed
-%{_datadir}/%{name}/pixmaps/cssed-about.png
-%{_datadir}/%{name}/pixmaps/cssed-icon.png
-%{_datadir}/%{name}/data/cssed-def.xml
+%{_datadir}/%{name}
 %{_pixmapsdir}/%{name}-icon.png
 %{_desktopdir}/%{name}.desktop
-%doc AUTHORS COPYING ChangeLog README INSTALL NEWS
