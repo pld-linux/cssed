@@ -1,4 +1,4 @@
-%define	rel	3
+%define	rel	4
 Summary:	CSS editor for web developers
 Summary(pl):	Edytor CSS dla programistów stron
 Name:		cssed
@@ -7,9 +7,10 @@ Release:	0.pre.%{rel}.1
 Group:		Development/Tools
 License:	GPL
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-pre%{version}-%{rel}.tar.gz
-# Source0-md5:	3058f4351805a899b19ffc78b8a42a47
-Patch0:		%{name}-opt.patch
+# Source0-md5:	d37c85bcb156119bf0611cfc01676453
 URL:		http://cssed.sourceforge.net
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	gtk+2-devel >= 2.0.0
 BuildRequires:	libgnomeui-devel >= 2.0
 BuildRequires:	libstdc++-devel
@@ -30,10 +31,12 @@ swoje potê¿ne mo¿liwo¶ci. Umo¿liwia miêdzy innymi przyspieszenie
 kodowania CSS przez autouzupe³nianie oraz pod¶wietlanie sk³adni CSS.
 
 %prep
-%setup -q -n %{name}-pre%{version}
-%patch0 -p1
+%setup -q -n %{name}-pre%{version}-%{rel}
 
 %build
+%{__aclocal}
+%{__autoconf}
+%{__automake}
 %configure
 %{__make} \
 	OPT="%{rpmcflags}"
@@ -58,10 +61,12 @@ EOF
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/cssed
