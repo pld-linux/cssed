@@ -1,12 +1,12 @@
 Summary:	CSS editor for web developers
 Summary(pl):	Edytor CSS dla programistów stron
 Name:		cssed
-Version:	0.2.1
-Release:	2
+Version:	0.3.0
+Release:	1
 Group:		Development/Tools
 License:	GPL
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	dd799e6cdbb2ea6e9e13b0bf22af8493
+Source0:	http://belnet.dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+# Source0-md5:	667632e3c5f7f3493a2d98cc47470209
 Source1:	%{name}.desktop
 URL:		http://cssed.sourceforge.net
 BuildRequires:	autoconf
@@ -61,6 +61,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/cssed
 %{_datadir}/%{name}
+%{_pkgconfigdir}/*.pc
 %{_pixmapsdir}/%{name}-icon.png
 %{_desktopdir}/%{name}.desktop
 %{_mandir}/man?/*
