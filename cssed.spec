@@ -1,13 +1,13 @@
-%define	rel	1
+%define	rel	3
 Summary:	CSS editor for web developers
 Summary(pl):	Edytor CSS dla programistów stron
 Name:		cssed
-Version:	pre0.1
-Release:	1
+Version:	0.1
+Release:	0.pre.%{rel}.1
 Group:		Development/Tools
 License:	GPL
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}-%{rel}.tar.gz
-# Source0-md5:	154d808510e19566ab49d1f58749494e
+Source0:	http://dl.sourceforge.net/%{name}/%{name}-pre%{version}-%{rel}.tar.gz
+# Source0-md5:	3058f4351805a899b19ffc78b8a42a47
 Patch0:		%{name}-opt.patch
 URL:		http://cssed.sourceforge.net
 BuildRequires:	gtk+2-devel >= 2.0.0
@@ -30,7 +30,7 @@ swoje potê¿ne mo¿liwo¶ci. Umo¿liwia miêdzy innymi przyspieszenie
 kodowania CSS przez autouzupe³nianie oraz pod¶wietlanie sk³adni CSS.
 
 %prep
-%setup -q
+%setup -q -n %{name}-pre%{version}
 %patch0 -p1
 
 %build
@@ -68,3 +68,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/%{name}
 %{_pixmapsdir}/%{name}-icon.png
 %{_desktopdir}/%{name}.desktop
+%{_mandir}/man?/*
