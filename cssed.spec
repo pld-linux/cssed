@@ -5,7 +5,7 @@ Version:	0.3.0
 Release:	1
 Group:		Development/Tools
 License:	GPL
-Source0:	http://belnet.dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/cssed/%{name}-%{version}.tar.gz
 # Source0-md5:	667632e3c5f7f3493a2d98cc47470209
 Source1:	%{name}.desktop
 URL:		http://cssed.sourceforge.net
