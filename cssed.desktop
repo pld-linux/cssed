@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Cssed
+Comment=CSS editor
+Comment[pl]=Edytor CSS
+Exec=cssed
+Icon=cssed-icon.png
+Terminal=false
+Type=Application
+Categories=GTK;Development;WebDevelopment;
+Encoding=UTF-8
+# vi: encoding=utf-8
