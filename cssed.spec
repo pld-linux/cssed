@@ -2,12 +2,12 @@
 Summary:	CSS editor for web developers
 Summary(pl):	Edytor CSS dla programistów stron
 Name:		cssed
-Version:	0.1
-Release:	0.pre.%{rel}.1
+Version:	0.2.0
+Release:	1
 Group:		Development/Tools
 License:	GPL
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-pre%{version}-%{rel}.tar.gz
-# Source0-md5:	13c5bcd70e2dcd75d7403069b95c8049
+Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+# Source0-md5:	bfe9554f401549d9414e423c2acbc1ca
 URL:		http://cssed.sourceforge.net
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -30,7 +30,7 @@ swoje potê¿ne mo¿liwo¶ci. Umo¿liwia miêdzy innymi przyspieszenie
 kodowania CSS przez autouzupe³nianie oraz pod¶wietlanie sk³adni CSS.
 
 %prep
-%setup -q -n %{name}-pre%{version}-%{rel}
+%setup -q
 
 %build
 %{__aclocal}
