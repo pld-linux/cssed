@@ -1,4 +1,4 @@
-%define	rel	4
+%define	rel	5
 Summary:	CSS editor for web developers
 Summary(pl):	Edytor CSS dla programistów stron
 Name:		cssed
@@ -7,12 +7,11 @@ Release:	0.pre.%{rel}.1
 Group:		Development/Tools
 License:	GPL
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-pre%{version}-%{rel}.tar.gz
-# Source0-md5:	d37c85bcb156119bf0611cfc01676453
+# Source0-md5:	13c5bcd70e2dcd75d7403069b95c8049
 URL:		http://cssed.sourceforge.net
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtk+2-devel >= 2.0.0
-BuildRequires:	libgnomeui-devel >= 2.0
 BuildRequires:	libstdc++-devel
 BuildRequires:	pkgconfig
 BuildRequires:	vte-devel
