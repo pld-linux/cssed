@@ -2,11 +2,12 @@ Summary:	CSS editor for web developers
 Summary(pl):	Edytor CSS dla programistów stron
 Name:		cssed
 Version:	0.2.1
-Release:	1
+Release:	2
 Group:		Development/Tools
 License:	GPL
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	dd799e6cdbb2ea6e9e13b0bf22af8493
+Source1:	%{name}.desktop
 URL:		http://cssed.sourceforge.net
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -43,21 +44,12 @@ kodowania CSS przez autouzupe³nianie oraz pod¶wietlanie sk³adni CSS.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
-install pixmaps/%{name}-icon.png \
-	$RPM_BUILD_ROOT%{_pixmapsdir}/%{name}-icon.png
-
-cat << EOF > $RPM_BUILD_ROOT%{_desktopdir}/%{name}.desktop
-[Desktop Entry]
-Name=Cssed
-Comment=CSS editor
-Exec=%{name}
-Icon=%{name}-icon.png
-Terminal=0
-Type=Application
-EOF
-
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}/%{name}.desktop
+install pixmaps/%{name}-icon.png \
+	$RPM_BUILD_ROOT%{_pixmapsdir}/%{name}-icon.png
 
 %find_lang %{name}
 
