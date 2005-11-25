@@ -1,0 +1,4 @@
+- up to 0.4.0 (0.3.0 has serious problems with displaying fonts)
+- dropped -pango.patch (included in sources)
+- added %%{__autoheader} (it uses config.h.in)
+- removed pkgconfig/cssed.pc from %files - not installed during make install
