@@ -1,5 +1,5 @@
 Summary:	CSS editor for web developers
-Summary(pl.UTF-8):   Edytor CSS dla programistów stron
+Summary(pl.UTF-8):	Edytor CSS dla programistów stron
 Name:		cssed
 Version:	0.4.0
 Release:	1
