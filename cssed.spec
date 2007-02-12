@@ -1,5 +1,5 @@
 Summary:	CSS editor for web developers
-Summary(pl):	Edytor CSS dla programistÛw stron
+Summary(pl.UTF-8):   Edytor CSS dla programist√≥w stron
 Name:		cssed
 Version:	0.4.0
 Release:	1
@@ -24,11 +24,11 @@ and it's a beta release candidate only, but it's already a powerfull
 CSS editor. cssed have features that allow any developer to speed his
 coding as autocompletion or CSS syntax higlighting.
 
-%description -l pl
-cssed jest edytorem CSS opartym o GTK+ dla programistÛw stron WWW. Nie 
-jest jeszcze ukoÒczony i jest to tylko wersja beta, ale juø pokazuje 
-swoje potÍøne moøliwo∂ci. Umoøliwia miÍdzy innymi przyspieszenie 
-kodowania CSS przez autouzupe≥nianie oraz pod∂wietlanie sk≥adni CSS.
+%description -l pl.UTF-8
+cssed jest edytorem CSS opartym o GTK+ dla programist√≥w stron WWW. Nie 
+jest jeszcze uko≈Ñczony i jest to tylko wersja beta, ale ju≈º pokazuje 
+swoje potƒô≈ºne mo≈ºliwo≈õci. Umo≈ºliwia miƒôdzy innymi przyspieszenie 
+kodowania CSS przez autouzupe≈Çnianie oraz pod≈õwietlanie sk≈Çadni CSS.
 
 %prep
 %setup -q
