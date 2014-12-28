@@ -11,7 +11,7 @@ Source1:	%{name}.desktop
 URL:		http://cssed.sourceforge.net
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	gtk+2-devel >= 1:2.0.0
 BuildRequires:	libstdc++-devel
 BuildRequires:	pkgconfig
