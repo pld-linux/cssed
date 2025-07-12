@@ -2,7 +2,7 @@ Summary:	CSS editor for web developers
 Summary(pl.UTF-8):	Edytor CSS dla programistów stron
 Name:		cssed
 Version:	0.4.0
-Release:	1
+Release:	2
 Group:		X11/Development/Tools
 License:	GPL
 Source0:	http://dl.sourceforge.net/cssed/%{name}-%{version}.tar.gz
